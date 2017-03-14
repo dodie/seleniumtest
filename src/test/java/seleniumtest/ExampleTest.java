@@ -31,7 +31,7 @@ public class ExampleTest {
 		for (int i = 0; i < 50; i++) {
 			System.out.println("Loading page...");
 			WebDriver driver = initWebDriver();
-			driver.get("https://www.google.com");
+			driver.navigate().to("https://www.google.com");
 			
 			WebElement webElement = driver.findElement(By.tagName("input"));
 			System.out.println("Page loaded. Iteration: " + i + ", id of found element: " + webElement.getAttribute("id"));
