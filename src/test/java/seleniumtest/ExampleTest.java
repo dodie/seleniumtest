@@ -2,13 +2,14 @@ package seleniumtest;
 
 import java.net.URL;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class ExampleTest {
 	
@@ -136,8 +137,10 @@ public class ExampleTest {
 		
 		
 		System.setProperty("webdriver.chrome.driver", "chromedriver");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
 		
-		return new ChromeDriver();
+		return new ChromeDriver(options);
 
 //		return new ChromeDriver();
 //		return new FirefoxDriver();
