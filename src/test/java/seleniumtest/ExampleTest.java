@@ -137,10 +137,10 @@ public class ExampleTest {
 		
 		
 		System.setProperty("webdriver.chrome.driver", "chromedriver");
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--no-sandbox");
+//		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("--no-sandbox");
 		
-		return new ChromeDriver(options);
+		return new ChromeDriver();
 
 //		return new ChromeDriver();
 //		return new FirefoxDriver();
